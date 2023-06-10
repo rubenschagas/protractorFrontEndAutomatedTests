@@ -1,5 +1,7 @@
 # PROTRACTOR FRONT END AUTOMATED TESTS
 
+![](./assets/readMeMd/protractorAT1.gif)
+
 ## TABLE OF CONTENTS
 
 [OVERVIEW](#overview)
@@ -14,15 +16,11 @@
 
 ## OVERVIEW
 
-The objective of this README.md document file is to provide help on how to install, update and run the automated tests on a Protractor E2E Front End Automated Test project.
+The objective of this README.md document file is to provide help on how to install, update and run the automated tests on a Protractor E2E Front End Automated Test project, as a Proof of Concept (POC).
 
 It has a Command Line Interface (CLI) helping a user or a pipeline cloud to inform scripts and so on.
 
 Also, it supports BDD based scenarios features files, and generates a pretty dashboard report at the end of each test cycle.
-
-The `allfeatures` script provides a headless automation execution testing. By the other hand, the `protractor` one executes it openning a browser.
-
-From time to time, it may be necessary to update the web-driver version in the package.json file.
 
 ![](./assets/readMeMd/bddFeature1.png)
 
@@ -43,6 +41,8 @@ npm install
 ```
 
 This step install and update all project dependencies.
+
+Note: from time to time, it may be necessary to update the web-driver version in the package.json file.
 
 The following steps are required to configure the eslint and prettier libraries.
 
@@ -108,6 +108,8 @@ ts-node e2e_cli.ts --script protractor
 ts-node e2e_cli.ts --script allfeatures
 ts-node e2e_cli.ts --script wm-update
 ```
+
+Note: the `allfeatures` script provides a headless automation execution testing. By the other hand, the `protractor` one executes it openning a browser.
 
 ## HELP MENU
 
