@@ -141,3 +141,7 @@ In case a step from a scenario fails, a screenshot will be attached to report:
 ![](./assets/readMeMd/reportError1.png)
 
 Note that the only possible configuration a switch between Light/Dark themes modes.
+
+See also:
+
+[Future of Angular E2E & Plans for Protractor #5502](https://github.com/angular/protractor/issues/5502).
