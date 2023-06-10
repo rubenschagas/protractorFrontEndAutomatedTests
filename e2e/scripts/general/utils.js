@@ -10,29 +10,34 @@ const
  * @param el1
  * @return {PromiseLike<void>}
  */
-exports.elementClick = function (el1) {
-    return elementClickBy(by.css(el1));
+exports.elementClick = async function (el1) {
+    return await elementClickBy(by.css(el1));
 };
 
-function elementClickBy(byLocator) {
+/**
+ *
+ * @param byLocator
+ * @return {PromiseLike<void>}
+ */
+async function elementClickBy(byLocator) {
     let el = element(byLocator);
-    return browser.waitForAngular()
-        .then(() => browser.wait(protractor.ExpectedConditions.elementToBeClickable(el), 60 * 1000))
-        .then(() => el.click());
+    await browser.waitForAngular();
+    await browser.wait(protractor.ExpectedConditions.elementToBeClickable(el), 60 * 1000);
+    await el.click();
 }
 
 /**
  * Check the value of an element
  *
- * @param {string} textField: el to be checked.
+ * @param {string} el: el to be checked.
  * @param {string} content: valeu to be checked.
  * @return {promise.Promise<string>}
  */
-exports.assertTextFieldContent = function (textField, content) {
-    return element(by.css(textField)).getAttribute("value")
-        .then(function (elContent) {
-            if (elContent !== content) {
-                throw new Error("Error! The text found (" + elContent + ") is not equals to the value (" + content + "). Selector: " + textField);
-            }
-        });
+exports.assertText = async function (el, content) {
+    const _el = element(by.css(el));
+    _el.getText().then(function (elContent) {
+        if (elContent !== content) {
+            throw new Error("Error! The text found (" + elContent + ") is not equals to the value (" + content + "). Selector: " + el);
+        }
+    });
 };

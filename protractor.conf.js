@@ -19,7 +19,7 @@ exports.config = {
     restartBrowserBetweenTests: false,
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    specs: 'e2e/features/*/*.feature',
+    specs: 'e2e/features/**/*.feature',
     ignoreUncaughtExceptions: true,
     // reference: https://www.protractortest.org/#/frameworks
     cucumberOpts: {
