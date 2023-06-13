@@ -146,4 +146,6 @@ Note that the only possible configuration a switch between Light/Dark themes mod
 
 See also:
 
+[Protractor API Docs](https://www.protractortest.org/#/api);
+
 [Future of Angular E2E & Plans for Protractor #5502](https://github.com/angular/protractor/issues/5502).
