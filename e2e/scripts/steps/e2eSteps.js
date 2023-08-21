@@ -12,6 +12,6 @@ When('I click on a link', async function () {
     await e2ePage.clickOnALink();
 });
 
-Then('I text should be fond on the page', async function () {
+Then('I text should be found on the page', async function () {
     await e2ePage.assertAText();
 });
